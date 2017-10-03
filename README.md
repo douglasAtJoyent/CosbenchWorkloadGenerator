@@ -12,13 +12,16 @@ directoryNameLength=4
 filesize=2MB2
 readRatio=20
 
-depth - the depth of the tree that will be created for reading and writing. 
-resultFile - the location of the file that is written.
-branches - the number of directories at each level for reading.
-leaves - the number of files at the lowest point in the tree.
-directoryNameLength - the length of the name of each of the directories.
-fileszie - the size of the files that will be created e.g. (2)MB 
-readRatio - the ratio of reads to writes in the main section.
+<table>
+ <tr> <th> Property</th><th>description</th></tr>
+ <tr> <td> depth </td><td>  The depth of the tree that will be created for reading and writing.</td></tr>
+ <tr> <td> resultFile</td><td> the location of the file that is written.</td></tr>
+ <tr> <td> branches</td><td> the number of directories at each level for reading.</td></tr>
+ <tr> <td>leaves</td><td> the number of files at the lowest point in the tree.</td></tr>
+ <tr> <td>directoryNameLength</td><td> the length of the name of each of the directories.</td></tr>
+ <tr> <td>fileszie</td><td> the size of the files that will be created e.g. (2)MB.</td></tr>
+ <tr> <td>readRatio</td><td>the ratio of reads to writes in the main section.</td></tr>
+</table>
 
 Useage:
  1. git clone https://github.com/douglasAtJoyent/CosbenchWorkloadGenerator
