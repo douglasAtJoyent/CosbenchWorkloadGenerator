@@ -20,3 +20,11 @@ directoryNameLength - the length of the name of each of the directories.
 fileszie - the size of the files that will be created e.g. (2)MB 
 readRatio - the ratio of reads to writes in the main section.
 
+Useage:
+ 1. git clone https://github.com/douglasAtJoyent/CosbenchWorkloadGenerator
+ 2. go to where you clone project.
+ 3. mvn package
+ 4. edit the generator.property to suite your needs.
+ 5. run java -jar target/CosbenchWorkloadGenerator-0.0.1-SNAPSHOT.jar 
+ At this point the file should be produced.
+ 
