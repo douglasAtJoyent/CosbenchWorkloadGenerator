@@ -6,23 +6,51 @@ import java.util.List;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * Represents <workstagedata>.
+ *
+ * @author DouglasAnderson
+ *
+ */
 public class WorkstageData implements CosbenchGeneratorData {
-    String name;
-    String description;
-    List<WorkData> work;
-    
-    public WorkstageData(String name) {
+    /**
+     * name attribute.
+     */
+    private String name;
+    /**
+     * description attribute.
+     */
+    private String description;
+    /**
+     * work tag.
+     */
+    private List<WorkData> work;
+
+    /**
+     * Basic constructor.
+     * @param name - name attribute.
+     */
+    public WorkstageData(final String name) {
         super();
         this.name = name;
         description = "This file was generated, feel free to change it";
         work = new LinkedList<WorkData>();
     }
-
-    public void addWork(WorkData newWork) {
+    /**
+     * Adds a new work child.
+     * @param newWork - the WorkData to be added.
+     */
+    public void addWork(final WorkData newWork) {
         work.add(newWork);
     }
 
-    public Element toXML(Document rootDoc) {
+    /**
+     * This will return a XML representation of the object.
+     *
+     * @param rootDoc - The document that the element will attach to.
+     * @return Element - the XML representation of the object.
+     */
+    public Element toXML(final Document rootDoc) {
         Element workstage = rootDoc.createElement("workstage");
         workstage.setAttribute("name", name);
         workstage.setAttribute("description", description);
@@ -37,20 +65,45 @@ public class WorkstageData implements CosbenchGeneratorData {
         return "WorkstageData [name=" + name + ", work=" + work + "]";
     }
 
-    public String getName() {
+    /**
+     * @return the name
+     */
+    public final String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    /**
+     * @param name the name to set
+     */
+    public final void setName(final String name) {
         this.name = name;
     }
 
-    public List<WorkData> getWork() {
+    /**
+     * @return the description
+     */
+    public final String getDescription() {
+        return description;
+    }
+
+    /**
+     * @param description the description to set
+     */
+    public final void setDescription(final String description) {
+        this.description = description;
+    }
+
+    /**
+     * @return the work
+     */
+    public final List<WorkData> getWork() {
         return work;
     }
 
-    public void setWork(List<WorkData> work) {
+    /**
+     * @param work the work to set
+     */
+    public final void setWork(final List<WorkData> work) {
         this.work = work;
     }
-
 }
